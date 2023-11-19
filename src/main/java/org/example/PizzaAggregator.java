@@ -25,7 +25,7 @@ class PizzaAggregator implements AggregateFunction<Tuple4<Integer, String, Integ
     @Override
     public Tuple5<Integer, String, Integer, Long, Long> getResult(PizzaAggregateAccumulator accumulator) {
 //        System.out.println("Returning Tuple");
-        return new Tuple5<Integer, String, Integer, Long, Long>(accumulator.store, accumulator.category, accumulator.sum, accumulator.earliest, accumulator.latest);
+        return new Tuple5<>(accumulator.store, accumulator.category, accumulator.sum, accumulator.earliest, accumulator.latest);
     }
 
     @Override
